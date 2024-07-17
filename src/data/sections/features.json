@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "icon": "pe-7s-paint-bucket",
+        "title": "Machine Learning Solutions",
+        "content": "Experianced with advanced algorithms for predictive analytics (regression), classification, and clustering using PyTorch, Scikit-learn and TensorFlow."
+    },
+    {
+        "id": 2,
+        "icon": "pe-7s-phone",
+        "title": "Generative AI Applications",
+        "content": "Experianced with LangChain and LangGraph frameworks, OpenAI embeddings, ChromaDB and Pinecone vectore databases, and Streamlit & NextJS for deployment."
+    },
+    {
+        "id": 3,
+        "icon": "pe-7s-display1",
+        "title": "AI & ML Deployment",
+        "content": "Expertise in deploying scalable AI and ML models using CI/CD pipelines with Azure DevOps, and Azure Machine Learning for seamless model integration."
+    },
+    {
+        "id": 4,
+        "icon": "pe-7s-diskette",
+        "title": "Data Engineering",
+        "content": "Orchestrate ETL pipelines with custom azure functions, ingesting data into optimal storage solutions, and complex data transformation using Databricks."
+    },
+    {
+        "id": 4,
+        "icon": "pe-7s-diskette",
+        "title": "Reporting & data visualization",
+        "content": "Skilled in Power BI for connecting to various data sources (M), performing efficient data modeling, complex calculations (DAX), and creating insightful dashboards. "
+    },
+    {
+        "id": 4,
+        "icon": "pe-7s-diskette",
+        "title": "Data Strategy & Consulting",
+        "content": "Specialized in solving any data-related challenges, from devising data strategies for immature companies to optimizing existing processes."
+    }
+]
