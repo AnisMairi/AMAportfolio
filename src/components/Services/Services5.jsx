@@ -4,7 +4,7 @@ import featuresData from "@/data/sections/features.json";
 
 function Services5() {
   return (
-    <section id="section1" className="services box lficon section-padding position-re">
+    <section id="services" className="services box lficon section-padding position-re">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-10">

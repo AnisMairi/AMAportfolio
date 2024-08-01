@@ -10,8 +10,8 @@ function FreelancreIntro() {
   }, []);
 
   return (
-    <header className="freelancre valign">
-      <div className="container">
+    <header id='intro' className="freelancre valign">
+      <div  className="container">
         <div className="row align-items-center justify-content-center" style={{marginLeft : "-350px"}}>
           <div className="col-lg- align-items-center justify-content-center">
           <div className="img">
@@ -81,12 +81,12 @@ function FreelancreIntro() {
               
 
               <li className="mail-us">
-                <a href="mailto:anismairi1@gmail.com?subject=Subject">
+                <a href="mailto:contact@anis-mairi.com?subject=Subject">
                   <div className="flex">
                     <div className="text valign">
                       <div className="full-width">
                         <p>Get In Touch</p>
-                        <h6>anismairi1@gmail.Com</h6>
+                        <h6>contact@anis-mairi.com</h6>
                       </div>
                     </div>
                     <div className="mail-icon">

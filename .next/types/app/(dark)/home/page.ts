@@ -1,4 +1,4 @@
-// File: C:\Users\amairi\Downloads\AMAportfolio\AMAportfolio\vie_nextjs_13\src\app\(dark)\home\page.js
+// File: C:\Users\amairi\Downloads\AMAportfolio\src\app\(dark)\home\page.js
 import * as entry from '../../../../../src/app/(dark)/home/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

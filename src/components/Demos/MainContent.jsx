@@ -1,30 +1,27 @@
-'use client';
-import React, { useEffect } from 'react';
-//= Components
-import Pages from './Pages';
-import Showcases from './Showcases';
-import InnerPages from './InnerPages';
-import Services from './Services';
-import CallToAction from './CallToAction';
-//= Scripts
-import initIsotope from "@/common/initIsotope";
+import React from 'react';
+//= Page components
+import Loading from '@/components/Common/Loader';
+import Navbar from '@/components/Common/Navbar';
+import FreelanceHeader from '@/components/Headers/FreelanceHeader';
+import Services from '@/components/Services/Services5';
+import Works from '@/components/Works/Works5';
+import Network from '@/components/Blogs/Network';
+import ContactForm from '@/components/Contact/ContactFormS';
 
-function MainContent() {
-  useEffect(() => {
-    setTimeout(() => {
-      initIsotope();
-    }, 500);
-  }, []);
 
-  return (
-    <div className="main-content section-padding pb-0">
-      <Pages />
-      <Showcases />
-      <InnerPages />
-      <Services />
-      <CallToAction />
-    </div>
-  )
+export const metadata = {
+  title: 'Anis Maïri Portfolio'
 }
 
-export default MainContent
+export default function Home7() {
+  return (
+    <>
+      <Navbar />
+      <FreelanceHeader />
+      <Services />
+      <Works />
+      <Network />
+      <ContactForm noLine />
+    </>
+  )
+}

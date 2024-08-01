@@ -1,362 +1,109 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
+import React, { useState, useEffect } from "react";
+import Typewriter from "typewriter-effect";
 
 function Pages() {
+  const [loadTypeWriter, setloadTypeWriter] = useState(false);
+
+  useEffect(() => {
+    setloadTypeWriter(true);
+  }, []);
+
   return (
-    <section className="masonery section-padding">
+    <header className="freelancre valign">
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-8 col-md-10">
-            <div className="sec-head text-center">
-              <h3 className="color-font">49+ stunning unique ready template</h3>
-              <span className="tbg"> <b>+</b>49 </span>
+        <div className="row align-items-center justify-content-center" style={{marginLeft : "-350px"}}>
+          <div className="col-lg- align-items-center justify-content-center">
+          <div className="img">
+            <img src="/img/PP.jpg" alt="Anis Maïri"/>
+          </div>
+          </div>
+          <div className="col-lg-8 valign" style={{marginRight : "-400px"}}>
+            <div className="cont" style={{marginLeft : "100px"}}>
+              <h1 className="col-lg-11 col-md-15">
+                <span style={{ fontSize: "55px", fontWeight: "bold" }}>Anis Maïri</span><br />
+                <span style={{ fontSize: "40px", fontWeight: "semibold" }}>Data Science & Engineering | Machine Learning & Generative AI specialist</span><br />
+                <span style={{ fontSize: "40px", lineHeight: "59px"}}> Using </span>
+                <span style={{ fontSize: "40px", lineHeight: "59px", marginLeft: '7px' }} className="cd-words-wrapper">
+                  {
+                    loadTypeWriter &&
+                    <Typewriter
+                      options={{
+                        wrapperClassName: "color-font fw-600",
+                        strings: [
+                          "Python",
+                          "JavaScript",
+                          "Azure Cloud",,
+                          "Power BI",
+                        ],
+                        autoStart: true,
+                        loop: true,
+                      }}
+                      loop={true}
+                    />
+                  }
+                </span>
+              </h1>
             </div>
           </div>
         </div>
-      </div>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="gallery full-width">
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home1-dark">
-                  <div className="img">
-                    <img src="/demo-img/1.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Main Demo</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
 
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home1-light">
-                  <div className="img">
-                    <img src="/demo-img/01.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Main Demo</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
+        <div className="states">
+          <div className="container">
+            <ul className="flex">
+              <li className="flex">
+                <div className="numb valign">
+                  <h3>3</h3>
+                </div>
+                <div className="text valign">
+                  <p>
+                    Years <br /> Of Experience
+                  </p>
+                </div>
+              </li>
 
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home2-dark">
-                  <div className="img">
-                    <img src="/demo-img/2.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Creative Agency</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
+              <li className="flex">
+                <div className="numb valign">
+                  <h3>+6</h3>
+                </div>
+                <div className="text valign">
+                  <p>
+                    Projects Completed
+                  </p>
+                </div>
+              </li>
 
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home2-light">
-                  <div className="img">
-                    <img src="/demo-img/02.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Creative Agency</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
+              <li className="flex">
+                <div className="numb valign">
+                  <p>actually based in Paris, France</p>
+                </div>
+              </li>
+              
 
-          <div className="gallery full-width">
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/mobile-app/mobile-app-dark">
-                  <div className="img">
-                    <img src="/demo-img/mobile1.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Mobile app</h6>
-                    <div className="sta new">
-                      <span>New Demo</span>
+              <li className="mail-us">
+                <a href="mailto:contact@anis-mairi.com?subject=Subject">
+                  <div className="flex">
+                    <div className="text valign">
+                      <div className="full-width">
+                        <p>Get In Touch</p>
+                        <h6>contact@anis-mairi.com</h6>
+                      </div>
+                    </div>
+                    <div className="mail-icon">
+                      <div className="icon-box">
+                        <span className="icon color-font pe-7s-mail"></span>
+                      </div>
                     </div>
                   </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/mobile-app/mobile-app-light">
-                  <div className="img">
-                    <img src="/demo-img/mobile2.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Mobile app</h6>
-                    <div className="sta new">
-                      <span>New Demo</span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home7-dark">
-                  <div className="img">
-                    <img src="/demo-img/n2.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Freelancer</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home7-light">
-                  <div className="img">
-                    <img src="/demo-img/n02.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Freelancer</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
+                </a>
+              </li>
+            </ul>
           </div>
-
-          <div className="gallery full-width">
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home8-dark">
-                  <div className="img">
-                    <img src="/demo-img/n3.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Architecture</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home8-light">
-                  <div className="img">
-                    <img src="/demo-img/n03.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Architecture</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home5-dark">
-                  <div className="img">
-                    <img src="/demo-img/3.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Digital Agency</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home5-light">
-                  <div className="img">
-                    <img src="/demo-img/03.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Digital Agency</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="gallery full-width">
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home3-dark">
-                  <div className="img">
-                    <img src="/demo-img/5.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Corporate Business</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home3-light">
-                  <div className="img">
-                    <img src="/demo-img/05.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Corporate Business</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home6-dark">
-                  <div className="img">
-                    <img src="/demo-img/n1.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Modern Agency</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home6-light">
-                  <div className="img">
-                    <img src="/demo-img/n01.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Modern Agency</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home4-dark">
-                  <div className="img">
-                    <img src="/demo-img/4.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Business One Page</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <Link target="_blank" href="/homepage/home4-light">
-                  <div className="img">
-                    <img src="/demo-img/04.png" alt="image" />
-                  </div>
-                  <div className="cont">
-                    <h6>Business One Page</h6>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <div className="img">
-                  <img src="/demo-img/c3.png" alt="image" />
-                </div>
-                <div className="cont">
-                  <h6>Restaurant</h6>
-                  <div className="sta coming">
-                    <span>Coming Soon</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 items">
-              <div className="item-img wow fadeInUp" data-wow-delay=".4s">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <div className="img">
-                  <img src="/demo-img/c4.png" alt="image" />
-                </div>
-                <div className="cont">
-                  <h6>Multipurpose</h6>
-                  <div className="sta coming">
-                    <span>Coming Soon</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-    </section>
-  )
-}
+      <div className="line bottom left"></div>
+    </header>
+  );
+};
 
-export default Pages
+export default Pages;

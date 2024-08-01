@@ -27,7 +27,7 @@ const Navbar = ({ lr, theme }) => {
   return (
     <nav ref={navbar} className={`navbar navbar-expand-lg change ${theme === "light" ? "light" : ""}`}>
       <div className="container">
-        <Link className="logo" href="/home">
+        <Link className="logo" href="#intro">
           {theme ? (
             theme === "light" ? (
               <img ref={lr} src={appData.darkLogo} alt="logo" />
@@ -57,27 +57,27 @@ const Navbar = ({ lr, theme }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-            <a  href={`/home`} className="nav-link">
+            <a  href={`#intro`} className="nav-link">
                 Intro
             </a>
             </li>
             <li className="nav-item">
-              <a href = {`#section1`} className="nav-link">
+              <a href = {`#services`} className="nav-link">
                 Services
               </a>
             </li>
             <li className="nav-item">
-            <a href={`#section2`} className="nav-link">
+            <a href={`#projects`} className="nav-link">
                 Projects
               </a>
             </li>
             <li className="nav-item">
-            <a href={'#section3'} className="nav-link">
+            <a href={'#network'} className="nav-link">
                 References
             </a>
             </li>
             <li className="nav-item">
-              <a href={`#section4`} className="nav-link">
+              <a href={`#contact`} className="nav-link">
                 Contact
               </a>
             </li>

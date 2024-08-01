@@ -48,7 +48,7 @@ const Network = () => {
   ];
 
   return (
-    <section id="section3" className="network section-padding sub-bg">
+    <section id="network" className="network section-padding sub-bg">
       <div className="container">
       <div className="row justify-content-center">
           <div className="col-lg-8 col-md-10">
@@ -88,7 +88,7 @@ const Network = () => {
               {engineers.map((engineer, index) => (
                 <div className="col-6" key={engineer.name} style={{ padding: '10px' }}>
                   <div className="img valign">
-                    <img src={engineer.image} alt={engineer.name} style={{ width: '100%', borderRadius: '10px' }} />
+                    <img src={engineer.image} alt={engineer.name} title={engineer.name} style={{ width: '100%', borderRadius: '10px' }} />
                   </div>
                 </div>
               ))}

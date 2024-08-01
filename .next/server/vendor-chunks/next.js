@@ -2050,7 +2050,7 @@ eval("/* eslint-disable import/no-extraneous-dependencies */\n\nObject.definePro
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMAportfolio\\vie_nextjs_13\\node_modules\\next\\dist\\client\\components\\app-router.js");
+module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\node_modules\\next\\dist\\client\\components\\app-router.js");
 
 
 /***/ }),
@@ -2064,7 +2064,7 @@ module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMApor
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMAportfolio\\vie_nextjs_13\\node_modules\\next\\dist\\client\\components\\client-page.js");
+module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\node_modules\\next\\dist\\client\\components\\client-page.js");
 
 
 /***/ }),
@@ -2078,7 +2078,7 @@ module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMApor
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMAportfolio\\vie_nextjs_13\\node_modules\\next\\dist\\client\\components\\error-boundary.js");
+module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\node_modules\\next\\dist\\client\\components\\error-boundary.js");
 
 
 /***/ }),
@@ -2103,7 +2103,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMAportfolio\\vie_nextjs_13\\node_modules\\next\\dist\\client\\components\\layout-router.js");
+module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\node_modules\\next\\dist\\client\\components\\layout-router.js");
 
 
 /***/ }),
@@ -2117,7 +2117,7 @@ module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMApor
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMAportfolio\\vie_nextjs_13\\node_modules\\next\\dist\\client\\components\\not-found-boundary.js");
+module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\node_modules\\next\\dist\\client\\components\\not-found-boundary.js");
 
 
 /***/ }),
@@ -2142,7 +2142,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMAportfolio\\vie_nextjs_13\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js");
+module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js");
 
 
 /***/ }),
@@ -2178,7 +2178,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMAportfolio\\vie_nextjs_13\\node_modules\\next\\dist\\client\\link.js");
+module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\node_modules\\next\\dist\\client\\link.js");
 
 
 /***/ }),
@@ -2192,7 +2192,7 @@ module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMApor
 "use strict";
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\AMAportfolio\\vie_nextjs_13\\node_modules\\next\\dist\\client\\script.js");
+module.exports = createProxy("C:\\Users\\amairi\\Downloads\\AMAportfolio\\node_modules\\next\\dist\\client\\script.js");
 
 
 /***/ }),
