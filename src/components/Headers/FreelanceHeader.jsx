@@ -15,7 +15,7 @@ function FreelancreIntro() {
         <div className="row align-items-center justify-content-center" style={{marginLeft : "-350px"}}>
           <div className="col-lg- align-items-center justify-content-center">
           <div className="img">
-            <img src="/img/PP.jpg" alt="Anis Maïri"/>
+            <img src="/img/PP.JPG" alt="Anis Maïri"/>
           </div>
           </div>
           <div className="col-lg-8 valign" style={{marginRight : "-400px"}}>
