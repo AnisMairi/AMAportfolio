@@ -4,7 +4,7 @@ const { permanentRedirect } = require('next/navigation');
 const path = require("path");
 
 const nextConfig = {
-  output: 'export',
+  /*output: 'export',*/
   reactStrictMode: false,
   sassOptions: {
     includePaths: [path.join(__dirname, "css")],
