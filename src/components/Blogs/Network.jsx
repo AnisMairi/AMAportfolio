@@ -28,7 +28,7 @@ const Network = () => {
       name: "Mounir Remache",
       title: "Lead Software Engineer @ ELCS Research",
       location: "Algiers, Algeria",
-      image: "/img/Mounir_Remache.jpg",
+      image: "/img/Mounir_Remache.JPG",
       linkedin: "https://www.linkedin.com/in/mohamed-mounir-remache/",
     },
     {
