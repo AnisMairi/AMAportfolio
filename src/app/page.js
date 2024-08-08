@@ -14,8 +14,8 @@ import Home7 from "./(dark)/home/page";
 export const metadata = {
   title: 'Anis Maïri Portfolio',
   icons: {
-    icon: "/AMA3.jpg",
-    shortcut: "/AMA3.jpg",
+    icon: "/AMA3.JPG",
+    shortcut: "/AMA3.JPG",
     other: generateStylesheetObject([
       'https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap',
       'https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap',
