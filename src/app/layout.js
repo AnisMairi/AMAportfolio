@@ -8,8 +8,8 @@ import "react-circular-progressbar/dist/styles.css";
 
 export const metadata = {
   title: 'Vie',
-  description: 'Vie - Multi-Purpose React.js Next.js Template',
-  keywords: ['HTML5', 'Template', 'Vie', 'Multi-Purpose', 'themeforest'],
+  description: 'Anis Mairi AI Developper',
+  keywords: ['Python', 'Javascript', 'Langchain', 'Azure Cloud'],
   icons: {
     icon: "/assets/imgs/favicon.ico",
     shortcut: "/assets/imgs/favicon.ico"
