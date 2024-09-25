@@ -12,19 +12,19 @@ function FreelancreIntro() {
   return (
     <header id='intro' className="freelancre valign">
       <div  className="container">
-        <div className="row align-items-center justify-content-center" style={{marginLeft : "-350px"}}>
-          <div className="col-lg- align-items-center justify-content-center">
+        <div className="row">
+          <div className="col-lg-4">
           <div className="img">
             <img src="/img/PP.JPG" alt="Anis Maïri"/>
           </div>
           </div>
-          <div className="col-lg-8 valign" style={{marginRight : "-400px"}}>
-            <div className="cont" style={{marginLeft : "100px"}}>
-              <h1 className="col-lg-11 col-md-15">
-                <span style={{ fontSize: "55px", fontWeight: "bold" }}>Anis Maïri</span><br />
-                <span style={{ fontSize: "40px", fontWeight: "semibold" }}>Data Science & Engineering | Machine Learning & Generative AI specialist</span><br />
-                <span style={{ fontSize: "40px", lineHeight: "59px"}}> Using </span>
-                <span style={{ fontSize: "40px", lineHeight: "59px", marginLeft: '7px' }} className="cd-words-wrapper">
+          <div className="col-lg-8 valign">
+            <div className="cont">
+              <h1 className="cd-headline clip">
+                <span style={{ fontSize: "50px", fontWeight: "bold" }}>Anis Maïri</span><br />
+                <span style={{ fontSize: "35px", fontWeight: "semibold" }}>Data Science & Engineering | Machine Learning & Generative AI specialist</span><br />
+                <span style={{ fontSize: "35px", lineHeight: "59px"}}> Using </span>
+                <span style={{ fontSize: "35px", lineHeight: "59px", marginLeft: '7px' }} className="cd-words-wrapper">
                   {
                     loadTypeWriter &&
                     <Typewriter
