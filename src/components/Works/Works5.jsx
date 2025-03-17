@@ -33,7 +33,7 @@ function Works5() {
               <span data-filter="*" className="active"> All </span>
               <span data-filter=".brand">Machine Learning</span>
               <span data-filter=".web">Generative AI</span>
-              <span data-filter=".graphic">Reports and vizualisations</span>
+              <span data-filter=".graphic">Reports and visualizations</span>
             </div>
           </div>
 
@@ -114,7 +114,7 @@ function Works5() {
               <div className="item-img">
                 <div className="cont">
                   <h6>RAG-Enabled Interaction System</h6>
-                  <p>Developped a Retrieval-Augmented Generation (RAG) tool using Azure OpenAI, ChromaDB and Streamlit, enabling auditors to interact with audit reports</p>
+                  <p>Developed a Retrieval-Augmented Generation (RAG) tool using Azure OpenAI, ChromaDB and Streamlit, enabling auditors to interact with audit reports</p>
                 </div>
                 <Link href={`#contact`} className="rota">
                   <img src="/img/RAG.jpg" alt="image" />
