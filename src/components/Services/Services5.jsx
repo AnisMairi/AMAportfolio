@@ -13,7 +13,7 @@ function Services5() {
                 Expertise
               </h6>
               <h3 className="wow color-font" style={{ fontSize: 'em' }}>
-                I povide guidance and services in the following areas
+                I provide guidance and services in the following areas
               </h3>
             </div>
           </div>
