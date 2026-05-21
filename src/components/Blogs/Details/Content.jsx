@@ -15,7 +15,7 @@ function Content() {
                 quitters never win. Take all negative words out of your
                 mental dictionary and focus on the solutions with utmost
                 conviction and patience. The battle is never lost until
-                you've abandon your vision.
+                you&apos;ve abandon your vision.
               </p>
             </div>
             <p>
@@ -34,8 +34,8 @@ function Content() {
             <p>
               We all intend to plan ahead, but too often let the
               day-to-day minutia get in the way of making a calendar for
-              the year. Sure, you can't know every detail to anticipate.
-              Heck, you can't know half the priorities that will pop up
+              the year. Sure, you can&apos;t know every detail to anticipate.
+              Heck, you can&apos;t know half the priorities that will pop up
               in any particular month. But you can plan for big picture
               seasonality, busy-times, and events.
             </p>
@@ -62,7 +62,7 @@ function Content() {
                 quitters never win. Take all negative words out of your
                 mental dictionary and focus on the solutions with utmost
                 conviction and patience. The battle is never lost until
-                you've abandon your vision.
+                you&apos;ve abandon your vision.
               </p>
             </div>
             <div className="row">
@@ -80,8 +80,8 @@ function Content() {
             <p>
               We all intend to plan ahead, but too often let the
               day-to-day minutia get in the way of making a calendar for
-              the year. Sure, you can't know every detail to anticipate.
-              Heck, you can't know half the priorities that will pop up
+              the year. Sure, you can&apos;t know every detail to anticipate.
+              Heck, you can&apos;t know half the priorities that will pop up
               in any particular month. But you can plan for big picture
               seasonality, busy-times, and events.
             </p>

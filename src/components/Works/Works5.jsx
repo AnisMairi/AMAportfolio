@@ -42,7 +42,7 @@ function Works5() {
               <div className="item-img">
                 <div className="cont">
                   <h6>Prediction of audit closing dates</h6>
-                  <p>Trained and deployed regression model to predict duration of action plans realisation based on Sonepar's confidential features</p>
+                  <p>Trained and deployed regression model to predict duration of action plans realisation based on Sonepar&apos;s confidential features</p>
                 </div>
                 <Link href={`#contact`} className="rota">
                   <img src="/img/regression.jpg" alt="image" />
@@ -66,7 +66,7 @@ function Works5() {
               <div className="item-img">
                 <div className="cont">
                   <h6>Topic identification</h6>
-                  <p>Efficiently classifying action plans by analyzing text columns 'Action Plans Recommendation' and 'Issue Description' to identify topics</p>
+                  <p>Efficiently classifying action plans by analyzing text columns &apos;Action Plans Recommendation&apos; and &apos;Issue Description&apos; to identify topics</p>
                 </div>
                 <Link href={`#contact`} className="rota">
                   <img src="/img/classification.jpg" alt="image" />

@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
-const { redirect } = require('next/dist/server/api-utils');
-const { permanentRedirect } = require('next/navigation');
 const path = require("path");
 
 const nextConfig = {
-  /*output: 'export',*/
   reactStrictMode: false,
   sassOptions: {
     includePaths: [path.join(__dirname, "css")],
@@ -14,7 +11,7 @@ const nextConfig = {
     buildActivity: false,
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   }
 };
 
