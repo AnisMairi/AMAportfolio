@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "pages:build": "next-on-pages",
-    "pages:preview": "npm run pages:build && wrangler pages dev .vercel/output/static",
     "start": "next start",
     "lint": "next lint"
   },
@@ -27,10 +25,6 @@
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.15",
-    "@cloudflare/workers-types": "^4.20260522.1",
-    "sass": "^1.66.1",
-    "vercel": "^54.3.0",
-    "wrangler": "^4.19.1"
+    "sass": "^1.66.1"
   }
 }
