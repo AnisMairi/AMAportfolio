@@ -1,60 +1,59 @@
-# Deploiement Cloudflare
+# Deploiement Cloudflare Pages
 
-## Strategie retenue
+Ce projet est prepare pour Cloudflare Pages avec le flux GitHub depuis l'interface Cloudflare.
 
-Ce projet doit etre deploye avec Cloudflare Workers + OpenNext.
+## Reglages Cloudflare Pages
 
-Il n'est pas un export statique pur car il contient une route API App Router:
+Dans Cloudflare Pages, connecter le repository GitHub puis utiliser:
+
+| Champ Cloudflare | Valeur |
+| --- | --- |
+| Framework preset | `Next.js` |
+| Build command | `npm run pages:build` |
+| Build output directory | `.vercel/output/static` |
+| Root directory | laisser vide |
+
+Le script `pages:build` utilise `@cloudflare/next-on-pages` pour generer la sortie Pages compatible avec les Functions Cloudflare.
+
+## Pourquoi pas `out`
+
+Le projet contient une route API App Router:
 
 - `src/app/(dark)/api/contact/route.js`, exposee en `/api/contact`
 
-Le build Next marque cette route comme dynamique (`ƒ /api/contact`). Un deploiement Cloudflare Pages statique avec `output: 'export'` supprimerait cette API.
-
-## Commandes locales
-
-```bash
-npm install
-npm run lint
-npm run build
-npm run build:cloudflare
-npm run preview
-```
-
-`npm run build` lance le build Next.js standard. Le build de production ignore les warnings ESLint existants pour ne pas bloquer le deploiement; gardez `npm run lint` comme verification separee.
-
-## Commandes Cloudflare Workers
-
-Depuis un workflow GitHub ou Cloudflare Workers Builds:
-
-```bash
-npm ci
-npm run deploy
-```
-
-Le Worker est configure par `wrangler.jsonc`.
+Un export statique Next.js avec `output: 'export'` genererait un dossier `out`, mais supprimerait cette API. Pour garder le formulaire de contact fonctionnel sur Cloudflare Pages, il faut utiliser la sortie `.vercel/output/static` produite par `next-on-pages`.
 
 ## Variables d'environnement
 
-Ne pas mettre de secret dans le code. Configurer ces variables dans Cloudflare:
+Configurer ces variables dans Cloudflare Pages, dans **Settings > Environment variables**:
 
 - `EMAILJS_SERVICE_ID`
 - `EMAILJS_TEMPLATE_ID`
 - `EMAILJS_PUBLIC_KEY`
 - `EMAILJS_PRIVATE_KEY` si votre template EmailJS l'exige
 
+Ajouter aussi:
+
+- `NODE_VERSION` = `20`
+
 Exemple local: copier `.env.example` vers `.env.local`, puis remplir les valeurs.
 
-Exemple Cloudflare:
+## Commandes locales
 
 ```bash
-npx wrangler secret put EMAILJS_SERVICE_ID
-npx wrangler secret put EMAILJS_TEMPLATE_ID
-npx wrangler secret put EMAILJS_PUBLIC_KEY
-npx wrangler secret put EMAILJS_PRIVATE_KEY
+npm install
+npm run build
+npm run pages:build
+```
+
+Pour tester avec Wrangler Pages en local:
+
+```bash
+npm run pages:preview
 ```
 
 ## Notes
 
-- `nodejs_compat` est active dans `wrangler.jsonc`.
-- `compatibility_date` est fixee a `2026-05-12`.
-- Les pages applicatives restent prerendered/statics quand Next le permet; seule l'API contact necessite le Worker.
+- `npm run build` lance le build Next.js standard.
+- `npm run pages:build` lance le build Cloudflare Pages.
+- Le package `@cloudflare/next-on-pages` est deprecie par Cloudflare au profit d'OpenNext Workers, mais il reste l'adapter adapte au flux Cloudflare Pages + GitHub demande ici.
