@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Image from "next/image";
 
 const Network = () => {
   const engineers = [
@@ -48,47 +48,56 @@ const Network = () => {
   ];
 
   return (
-    <section id="network" className="network section-padding sub-bg">
+    <section id="network" className="network section-padding" aria-labelledby="network-heading">
       <div className="container">
       <div className="row justify-content-center">
           <div className="col-lg-8 col-md-10">
-            <div className="sec-head  text-center">
-              <h6 className="wow fadeIn" data-wow-delay=".5s">
+            <div className="sec-head portfolio-section-head">
+              <h6>
                 References
               </h6>
-              <h3 className="wow color-font" style={{ fontSize: '2em' }}>
-                Meet my network filled with the most talented engineers
-              </h3>
+              <h2 id="network-heading" className="portfolio-section-title">
+                A reference network across engineering, cloud, research and consulting.
+              </h2>
+              <p className="section-lede">
+                People who can speak to technical standards, collaboration and delivery context.
+              </p>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col-lg-6">
             {engineers.map((engineer, index) => (
-              <div className="item wow fadeInUp" data-wow-delay={`${0.3 + index * 0.2}s`} key={engineer.name} style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-                <div className="cont" style={{ flex: 1 }}>
+              <article className="network-person" key={engineer.name}>
+                <div>
                   <div>
-                    <h5 style={{ margin: '0 0 5px 0', display: 'flex', alignItems: 'center' }}>
-                      <Link href={engineer.linkedin} legacyBehavior>
-                        <a style={{ color: '#20bdff', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-                          {engineer.name}
-                          <img src="/img/linkedin.png" alt="LinkedIn" style={{ width: '30px', height: '30px', marginLeft: '10px' }} />
-                        </a>
-                      </Link>
-                    </h5>
-                    <p style={{ margin: '0 0 5px 0', color: '#bbb' }}>{engineer.title}</p>
-                    <p style={{ margin: '0', color: '#bbb' }}>{engineer.location}</p>
+                    <h3>
+                      <a href={engineer.linkedin} target="_blank" rel="noreferrer">
+                        {engineer.name}
+                        <Image src="/img/linkedin.png" alt="" width={18} height={18} aria-hidden="true" unoptimized />
+                        <span className="sr-only">LinkedIn profile</span>
+                      </a>
+                    </h3>
+                    <p>{engineer.title}</p>
+                    <p>{engineer.location}</p>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
           <div className="col-lg-6">
-            <div className="row">
-              {engineers.map((engineer, index) => (
-                <div className="col-6" key={engineer.name} style={{ padding: '10px' }}>
-                  <div className="img valign">
-                    <img src={engineer.image} alt={engineer.name} title={engineer.name} style={{ width: '100%', borderRadius: '10px' }} />
+            <div className="row network-photos" aria-hidden="true">
+              {engineers.map((engineer) => (
+                <div className="col-6" key={engineer.name}>
+                  <div className="photo-frame">
+                    <Image
+                      src={engineer.image}
+                      alt={engineer.name}
+                      title={engineer.name}
+                      width={360}
+                      height={360}
+                      unoptimized
+                    />
                   </div>
                 </div>
               ))}

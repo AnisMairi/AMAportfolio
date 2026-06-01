@@ -1,18 +1,14 @@
 //= Global Styles
 import "@/styles/main.scss";
-import "@/styles/preloader.css";
-import "@/styles/modal-video.css";
-import "swiper/css/bundle";
-import "react-circular-progressbar/dist/styles.css";
 
 
 export const metadata = {
-  title: 'Vie',
-  description: 'Anis Mairi AI Developper',
-  keywords: ['Python', 'Javascript', 'Langchain', 'Azure Cloud'],
+  title: 'Anis Maïri | Data & AI Engineer',
+  description: 'Data and AI Engineer portfolio focused on Microsoft Fabric, Azure AI Foundry, Azure data platforms, Databricks migrations and Power BI.',
+  keywords: ['Python', 'Microsoft Fabric', 'Azure AI Foundry', 'Azure Cloud', 'Databricks', 'Power BI', 'Data Engineering', 'Generative AI'],
   icons: {
-    icon: "/assets/imgs/favicon.ico",
-    shortcut: "/assets/imgs/favicon.ico"
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico"
   },
 }
 

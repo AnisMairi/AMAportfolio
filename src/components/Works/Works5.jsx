@@ -1,27 +1,46 @@
 'use client';
-import React, { useEffect } from 'react';
-import Link from 'next/link';
-//= Scripts
-import initIsotope from "@/common/initIsotope";
+import React, { useMemo, useState } from 'react';
+import Image from "next/image";
+//= Static Data
+import projectsData from "@/data/projects.json";
+
+const filters = [
+  { label: "All", value: "*" },
+  { label: "Machine Learning", value: ".brand" },
+  { label: "Generative AI", value: ".web" },
+  { label: "Fabric & Data Platform", value: ".fabric" },
+  { label: "BI & Visualization", value: ".graphic" },
+];
+
+function handleFilterKeyDown(event) {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    event.currentTarget.click();
+  }
+}
 
 function Works5() {
-  useEffect(() => {
-    setTimeout(() => {
-      initIsotope();
-    }, 500);
-  }, []);
+  const [activeFilter, setActiveFilter] = useState("*");
+  const visibleProjects = useMemo(() => {
+    if (activeFilter === "*") return projectsData;
+
+    const category = activeFilter.replace(".", "");
+    return projectsData.filter((project) => project.categories.includes(category));
+  }, [activeFilter]);
 
   return (
-    <section id="projects" className="portfolio-frl section-padding pb-70">
+    <section id="projects" className="portfolio-frl section-padding" aria-labelledby="projects-heading">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-10">
             <div className="sec-head text-center">
-              <h6 className="wow fadeIn" data-wow-delay=".5s">Projects</h6>
-              <h3 className="wow color-font">
-                Check out my portfolio &amp; <br />
-                try out some demos first hand
-              </h3>
+              <h6>Projects</h6>
+              <h2 id="projects-heading" className="portfolio-section-title">
+                Selected data, AI and platform work
+              </h2>
+              <p className="section-lede">
+                A concise view of problems solved across Fabric, Azure, Databricks, ML and Power BI.
+              </p>
             </div>
           </div>
         </div>
@@ -29,158 +48,112 @@ function Works5() {
       <div className="container">
         <div className="row">
           <div className="filtering col-12">
-            <div className="filter wow fadeIn" data-wow-delay=".5s">
-              <span data-filter="*" className="active"> All </span>
-              <span data-filter=".brand">Machine Learning</span>
-              <span data-filter=".web">Generative AI</span>
-              <span data-filter=".graphic">Reports and visualizations</span>
+            <div className="filter" role="group" aria-label="Project filters">
+              {filters.map((filter, index) => (
+                <span
+                  data-filter={filter.value}
+                  className={activeFilter === filter.value ? "active" : ""}
+                  role="button"
+                  tabIndex="0"
+                  aria-pressed={activeFilter === filter.value}
+                  onClick={() => setActiveFilter(filter.value)}
+                  onKeyDown={handleFilterKeyDown}
+                  key={filter.value}
+                >
+                  {filter.label}
+                </span>
+              ))}
             </div>
           </div>
 
-          <div className="gallery full-width">
-            <div className="col-md-6 items brand wow fadeInUp" data-wow-delay=".4s">
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Prediction of audit closing dates</h6>
-                  <p>Trained and deployed regression model to predict duration of action plans realisation based on Sonepar&apos;s confidential features</p>
-                </div>
-                <Link href={`#contact`} className="rota">
-                  <img src="/img/regression.jpg" alt="image" />
-                  <div className="item-img-overlay"></div>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <a href="#0">Machine Learning</a>
-                  </span>
-                  <span>
-                    <a href="#0">Regression</a>
-                  </span>
-                  <span>
-                    <a href="#0">Azure ML</a>
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div className="gallery full-width project-grid">
+            {visibleProjects.map((project, index) => (
+              <article
+                className={`${project.featured ? "col-12 project-featured" : "col-md-6"} project-item`}
+                key={project.id}
+                aria-label={project.name}
+              >
+                <div className="project-card">
+                  <div className="project-card-meta">
+                    <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
+                    <span>{project.domain || project.name}</span>
+                    {project.featured && <span className="project-featured-label">Current focus</span>}
+                  </div>
 
-            <div className="col-md-6 items brand wow fadeInUp" data-wow-delay=".4s">
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Topic identification</h6>
-                  <p>Efficiently classifying action plans by analyzing text columns &apos;Action Plans Recommendation&apos; and &apos;Issue Description&apos; to identify topics</p>
-                </div>
-                <Link href={`#contact`} className="rota">
-                  <img src="/img/classification.jpg" alt="image" />
-                  <div className="item-img-overlay"></div>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <a href="#0">Machine Learning</a>
-                  </span>
-                  <span>
-                    <a href="#0">NLP</a>
-                  </span>
-                  <span>
-                    <a href="#0">Python</a>
-                  </span>
-                </div>
-              </div>
-            </div>
+                  <div className="project-card-layout">
+                    <div className="project-card-main">
+                      <div className="project-card-top">
+                        <span className="project-icon" aria-hidden="true">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className="project-kicker">{project.name}</span>
+                      </div>
 
-            <div className="col-md-6 items brand wow fadeInUp" data-wow-delay=".4s">
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Fraud & anomaly detection</h6>
-                  <p>Robust tool leveraging statistics and ML to detect fraudulent activities in travel and expenses data to identify unusual patterns and discrepancies that may indicate fraud</p>
-                </div>
-                <Link href={`#contact`} className="rota">
-                  <img src="/img/clustering.jpg" alt="image" />
-                  <div className="item-img-overlay"></div>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <a href="#0">Machine Learning</a>
-                  </span>
-                  <span>
-                    <a href="#0">Statistics</a>
-                  </span>
-                  <span>
-                    <a href="#0">Unsupervised ML</a>
-                  </span>
-                </div>
-              </div>
-            </div>
+                      <div className="project-card-content">
+                        <h3>{project.title}</h3>
+                        <p className="project-subtitle">{project.subtitle}</p>
+                        <p>{project.description}</p>
+                      </div>
+                    </div>
 
-            <div className="col-md-6 items web wow fadeInUp" data-wow-delay=".4s">
-              <div className="item-img">
-                <div className="cont">
-                  <h6>RAG-Enabled Interaction System</h6>
-                  <p>Developed a Retrieval-Augmented Generation (RAG) tool using Azure OpenAI, ChromaDB and Streamlit, enabling auditors to interact with audit reports</p>
-                </div>
-                <Link href={`#contact`} className="rota">
-                  <img src="/img/RAG.jpg" alt="image" />
-                  <div className="item-img-overlay"></div>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <a href="#0">Langchain</a>
-                  </span>
-                  <span>
-                    <a href="#0">OpenAI Embeddings</a>
-                  </span>
-                  <span>
-                    <a href="#0">ChromaDB</a>
-                  </span>
-                </div>
-              </div>
-            </div>
+                    <div className="project-media" aria-label={`${project.title} visual`}>
+                      {project.visual === "fabric" ? (
+                        <div className="fabric-visual" aria-hidden="true">
+                          <div className="fabric-stage">
+                            <span>Source estate</span>
+                            <strong>Azure legacy</strong>
+                            <strong>Databricks</strong>
+                          </div>
+                          <div className="fabric-stage is-core">
+                            <span>Fabric core</span>
+                            <strong>OneLake</strong>
+                            <strong>Lakehouse</strong>
+                          </div>
+                          <div className="fabric-stage">
+                            <span>Business layer</span>
+                            <strong>Semantic model</strong>
+                            <strong>Power BI</strong>
+                          </div>
+                        </div>
+                      ) : (
+                        <Image
+                          src={project.image}
+                          alt={project.imageAlt}
+                          width={640}
+                          height={420}
+                          unoptimized
+                        />
+                      )}
+                    </div>
+                  </div>
 
-            <div className="col-md-6 items web wow fadeInUp" data-wow-delay=".4s">
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Live data chatbot</h6>
-                  <p>Developed a chatbot to interact with structured data in Databricks SQL Warehouse. The system dynamically queries based on user questions and retrieves information.</p>
-                </div>
-                <Link href={`#contact`} className="rota">
-                  <img src="/img/chatbot.jpg" alt="image" />
-                  <div className="item-img-overlay"></div>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <a href="#0">Langchain</a>
-                  </span>
-                  <span>
-                    <a href="#0">Generative AI</a>
-                  </span>
-                  <span>
-                    <a href="#0">Azure SQL Warehouse</a>
-                  </span>
-                </div>
-              </div>
-            </div>
+                  <div className="project-card-detail">
+                    <div className="project-impact">
+                      <span>Impact</span>
+                      <p>{project.impact}</p>
+                    </div>
 
-            <div className="col-md-6 items graphic wow fadeInUp" data-wow-delay=".4s">
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Power BI Reporting Solutions</h6>
-                  <p>Delivered end-to-end Power BI reports for various departments including Audit, Merger and Acquisitions , Finance and Accounting, Green Offer and Sustainability... </p>
+                    {project.scope && (
+                      <ul className="project-scope" aria-label={`${project.title} delivery scope`}>
+                        {project.scope.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+
+                  <div className="project-tags" aria-label={`${project.title} topics`}>
+                    {project.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+
+                  <a href="#contact" className="project-card-link">
+                    Discuss this kind of work <span aria-hidden="true">-&gt;</span>
+                  </a>
                 </div>
-                <Link href={`#contact`} className="rota">
-                  <img src="/img/dataviz.jpg" alt="image" />
-                  <div className="item-img-overlay"></div>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <a href="#0">PowerBI</a>
-                  </span>
-                  <span>
-                    <a href="#0">Power Query</a>
-                  </span>
-                  <span>
-                    <a href="#0">DAX / M</a>
-                  </span>
-                </div>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>

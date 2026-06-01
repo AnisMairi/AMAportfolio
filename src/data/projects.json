@@ -1,0 +1,113 @@
+[
+  {
+    "id": "fabric-migration",
+    "name": "Microsoft Fabric Migration",
+    "title": "Migration vers Microsoft Fabric",
+    "subtitle": "From Azure legacy + Databricks to Microsoft Fabric",
+    "description": "Migration d'une plateforme data existante basée sur Azure legacy et Databricks vers Microsoft Fabric, avec refonte de l'ingestion, du stockage, des transformations, de l'exposition métier et de la gouvernance data.",
+    "impact": "Modernisation d'une architecture data existante vers une plateforme unifiée, gouvernée et prête pour les usages BI et data engineering.",
+    "domain": "Data platform migration",
+    "featured": true,
+    "categories": ["fabric", "graphic"],
+    "visual": "fabric",
+    "scope": [
+      "Ingestion, storage and transformation redesign",
+      "Lakehouse, semantic model and business exposure",
+      "Governance and deployment pipeline alignment"
+    ],
+    "tags": [
+      "Microsoft Fabric",
+      "Lakehouse / OneLake",
+      "Data Engineering (T-SQL / KQL)",
+      "Migration Azure legacy",
+      "Databricks migration",
+      "Power BI / semantic model",
+      "Data governance",
+      "Deployment pipeline"
+    ]
+  },
+  {
+    "id": "audit-closing-date",
+    "name": "Audit ML Forecasting",
+    "title": "Prediction of audit closing dates",
+    "subtitle": "Machine learning for audit planning",
+    "description": "Trained and deployed a regression model to predict action plan realization duration from structured audit data.",
+    "impact": "Helped audit teams anticipate delivery timelines and prioritize follow-up actions with clearer planning signals.",
+    "domain": "Predictive analytics",
+    "categories": ["brand"],
+    "image": "/img/regression.jpg",
+    "imageAlt": "Regression model visualization for audit closing date prediction",
+    "scope": ["Feature preparation", "Regression modelling", "Model deployment"],
+    "tags": ["Machine Learning", "Regression", "Azure ML"]
+  },
+  {
+    "id": "topic-identification",
+    "name": "Topic Identification",
+    "title": "Topic identification",
+    "subtitle": "NLP classification for audit action plans",
+    "description": "Classified action plans by analyzing recommendation and issue description text to identify recurring themes.",
+    "impact": "Improved portfolio-level visibility into recurring audit topics and reduced manual review effort.",
+    "domain": "NLP classification",
+    "categories": ["brand"],
+    "image": "/img/classification.jpg",
+    "imageAlt": "Text classification visual for topic identification",
+    "scope": ["Text preprocessing", "Topic classification", "Audit portfolio analysis"],
+    "tags": ["Machine Learning", "NLP", "Python"]
+  },
+  {
+    "id": "fraud-anomaly-detection",
+    "name": "Fraud and Anomaly Detection",
+    "title": "Fraud & anomaly detection",
+    "subtitle": "Statistics and unsupervised ML",
+    "description": "Built a tool leveraging statistics and machine learning to detect unusual patterns in travel and expenses data.",
+    "impact": "Surfaced suspicious behavior faster and gave reviewers a more focused anomaly investigation workflow.",
+    "domain": "Anomaly detection",
+    "categories": ["brand"],
+    "image": "/img/clustering.jpg",
+    "imageAlt": "Clustering visualization for anomaly detection",
+    "scope": ["Statistical profiling", "Unsupervised learning", "Reviewer workflow support"],
+    "tags": ["Machine Learning", "Statistics", "Unsupervised ML"]
+  },
+  {
+    "id": "rag-interaction-system",
+    "name": "RAG Interaction System",
+    "title": "RAG-enabled interaction system",
+    "subtitle": "Azure OpenAI retrieval assistant",
+    "description": "Developed a Retrieval-Augmented Generation tool using Azure OpenAI, ChromaDB and Streamlit, enabling auditors to interact with audit reports.",
+    "impact": "Made long audit reports easier to query, summarize and reuse through a guided conversational interface.",
+    "domain": "Applied GenAI",
+    "categories": ["web"],
+    "image": "/img/RAG.jpg",
+    "imageAlt": "RAG application interface and retrieval workflow",
+    "scope": ["Retrieval design", "Embeddings workflow", "Streamlit interface"],
+    "tags": ["LangChain", "OpenAI embeddings", "ChromaDB"]
+  },
+  {
+    "id": "live-data-chatbot",
+    "name": "Live Data Chatbot",
+    "title": "Live data chatbot",
+    "subtitle": "Natural language over Databricks SQL",
+    "description": "Developed a chatbot to interact with structured data in Databricks SQL Warehouse. The system dynamically queries based on user questions and retrieves information.",
+    "impact": "Reduced friction between business questions and governed warehouse data by making exploration conversational.",
+    "domain": "Data assistant",
+    "categories": ["web", "fabric"],
+    "image": "/img/chatbot.jpg",
+    "imageAlt": "Chatbot interface for structured data analysis",
+    "scope": ["Natural language interface", "Databricks SQL access", "Governed data exploration"],
+    "tags": ["LangChain", "Generative AI", "Databricks SQL"]
+  },
+  {
+    "id": "power-bi-reporting",
+    "name": "Power BI Reporting Solutions",
+    "title": "Power BI reporting solutions",
+    "subtitle": "Semantic models and dashboards",
+    "description": "Delivered end-to-end Power BI reports for audit, merger and acquisitions, finance, accounting, green offer and sustainability teams.",
+    "impact": "Turned operational data into decision-ready dashboards with cleaner models, measures and reporting workflows.",
+    "domain": "BI delivery",
+    "categories": ["graphic"],
+    "image": "/img/dataviz.jpg",
+    "imageAlt": "Power BI and data visualization dashboard",
+    "scope": ["Semantic modelling", "DAX and Power Query", "Business reporting workflows"],
+    "tags": ["Power BI", "Power Query", "DAX / M"]
+  }
+]

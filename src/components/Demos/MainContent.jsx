@@ -1,6 +1,5 @@
 import React from 'react';
 //= Page components
-import Loading from '@/components/Common/Loader';
 import Navbar from '@/components/Common/Navbar';
 import FreelanceHeader from '@/components/Headers/FreelanceHeader';
 import Services from '@/components/Services/Services5';
@@ -15,13 +14,13 @@ export const metadata = {
 
 export default function Home7() {
   return (
-    <>
+    <main id="main-content">
       <Navbar />
       <FreelanceHeader />
       <Services />
       <Works />
       <Network />
       <ContactForm noLine />
-    </>
+    </main>
   )
 }

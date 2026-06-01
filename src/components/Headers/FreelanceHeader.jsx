@@ -1,107 +1,82 @@
 'use client';
-import React, { useState, useEffect } from "react";
-import Typewriter from "typewriter-effect";
+import React from "react";
+import Image from "next/image";
 
 function FreelancreIntro() {
-  const [loadTypeWriter, setloadTypeWriter] = useState(false);
-
-  useEffect(() => {
-    setloadTypeWriter(true);
-  }, []);
+  const tools = [
+    "Microsoft Fabric",
+    "Azure AI Foundry",
+    "Azure Cloud",
+    "Power BI",
+    "Databricks",
+  ];
 
   return (
-    <header id='intro' className="freelancre valign">
-      <div  className="container">
-        <div className="row">
-          <div className="col-lg-4">
-          <div className="img">
-            <img src="/img/PP.JPG" alt="Anis Maïri"/>
-          </div>
-          </div>
-          <div className="col-lg-8 valign">
-            <div className="cont">
-              <h1 className="cd-headline clip">
-                <span style={{ fontSize: "50px", fontWeight: "bold" }}>Anis Maïri</span><br />
-                <span style={{ fontSize: "35px", fontWeight: "semibold" }}>Data Science & Engineering | Machine Learning & Generative AI specialist</span><br />
-                <span style={{ fontSize: "35px", lineHeight: "59px"}}> Using </span>
-                <span style={{ fontSize: "35px", lineHeight: "59px", marginLeft: '7px' }} className="cd-words-wrapper">
-                  {
-                    loadTypeWriter &&
-                    <Typewriter
-                      options={{
-                        wrapperClassName: "color-font fw-600",
-                        strings: [
-                          "Python",
-                          "JavaScript",
-                          "Azure Cloud",,
-                          "Power BI",
-                        ],
-                        autoStart: true,
-                        loop: true,
-                      }}
-                      loop={true}
-                    />
-                  }
-                </span>
-              </h1>
+    <header id="intro" className="portfolio-hero">
+      <div className="container portfolio-hero-shell">
+        <div className="portfolio-hero-grid">
+          <div className="portfolio-hero-copy">
+            <p className="hero-eyebrow">Data & AI Engineer / Microsoft ecosystem</p>
+            <div className="hero-identity">
+              <figure className="img portfolio-portrait">
+                <Image src="/img/PP.JPG" alt="Portrait of Anis Maïri" width={178} height={178} unoptimized priority />
+              </figure>
+              <div>
+                <h1 className="hero-title">Anis Maïri</h1>
+                <p className="hero-role">Data / AI / Microsoft Fabric / Azure</p>
+              </div>
             </div>
+            <p className="hero-subtitle">
+              I help teams modernize data platforms, build governed analytics foundations,
+              and turn applied AI ideas into maintainable delivery systems.
+            </p>
+
+            <div className="hero-actions" aria-label="Primary calls to action">
+              <a href="#projects" className="butn hero-btn hero-btn-primary">
+                <span>Review selected work</span>
+              </a>
+              <a
+                href="mailto:contact@anis-mairi.com?subject=Portfolio%20contact"
+                className="butn hero-btn hero-btn-secondary"
+              >
+                <span>Start a conversation</span>
+              </a>
+            </div>
+
+            <ul className="hero-stack" aria-label="Core technology focus">
+              {tools.map((tool) => (
+                <li key={tool}>{tool}</li>
+              ))}
+            </ul>
           </div>
         </div>
 
         <div className="states">
-          <div className="container">
-            <ul className="flex">
-              <li className="flex">
-                <div className="numb valign">
-                  <h3>3</h3>
-                </div>
-                <div className="text valign">
-                  <p>
-                    Years <br /> Of Experience
-                  </p>
-                </div>
-              </li>
+          <ul className="portfolio-stats" aria-label="Portfolio highlights">
+            <li className="portfolio-stat-card">
+              <strong>4</strong>
+              <span>Years of experience</span>
+            </li>
 
-              <li className="flex">
-                <div className="numb valign">
-                  <h3>+6</h3>
-                </div>
-                <div className="text valign">
-                  <p>
-                    Projects Completed
-                  </p>
-                </div>
-              </li>
+            <li className="portfolio-stat-card">
+              <strong>Fabric</strong>
+              <span>Current migration focus</span>
+            </li>
 
-              <li className="flex">
-                <div className="numb valign">
-                  <p>actually based in Paris, France</p>
-                </div>
-              </li>
-              
+            <li className="portfolio-stat-card">
+              <strong>Azure</strong>
+              <span>Cloud, AI and data platform delivery</span>
+            </li>
 
-              <li className="mail-us">
-                <a href="mailto:contact@anis-mairi.com?subject=Subject">
-                  <div className="flex">
-                    <div className="text valign">
-                      <div className="full-width">
-                        <p>Get In Touch</p>
-                        <h6>contact@anis-mairi.com</h6>
-                      </div>
-                    </div>
-                    <div className="mail-icon">
-                      <div className="icon-box">
-                        <span className="icon color-font pe-7s-mail"></span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+            <li className="portfolio-stat-card hero-mail">
+              <a href="mailto:contact@anis-mairi.com?subject=Portfolio%20contact">
+                <span>Contact</span>
+                <strong>contact@anis-mairi.com</strong>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div className="line bottom left"></div>
     </header>
   );
 };

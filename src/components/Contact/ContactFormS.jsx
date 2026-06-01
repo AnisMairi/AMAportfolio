@@ -1,82 +1,59 @@
-"use client";
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React from 'react';
+
+const contactEmail = "contact@anis-mairi.com";
+const mailtoHref = `mailto:${contactEmail}?subject=Portfolio%20contact`;
 
 function ContactFormS({ noLine }) {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    console.log('Sending email...');
-
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-      .then(
-        (result) => {
-          console.log('SUCCESS!', result.status, result.text);
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        }
-      );
-  };
-
   return (
-    <section id='contact' className="contact-sec section-padding position-re">
+    <section id="contact" className="portfolio-contact section-padding" aria-labelledby="contact-heading">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-10">
-            <div className="sec-head text-center">
-              <h6 className="wow fadeIn" data-wow-delay=".5s">Reach Out</h6>
-              <h3 className="wow color-font">
-                Let's Get in Touch And Make Cool Things Together.
-              </h3>
+            <div className="sec-head portfolio-section-head">
+              <h6>Contact</h6>
+              <h2 id="contact-heading" className="portfolio-section-title">
+                Useful conversations start with a concrete system, constraint or roadmap.
+              </h2>
+              <p className="section-lede">
+                Available for Microsoft Fabric migration, data engineering, BI and applied AI work.
+              </p>
             </div>
           </div>
         </div>
+
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <div className="form wow fadeInUp" data-wow-delay=".5s">
-              <form id="contact-form" ref={form} onSubmit={sendEmail}>
-                <div className="messages"></div>
-                <div className="controls">
-                  <div className="row">
-                    <div className="col-lg-4">
-                      <div className="form-group">
-                        <input id="form_name" type="text" name="user_name" placeholder="Name" required="required" />
-                      </div>
-                    </div>
-                    <div className="col-lg-4">
-                      <div className="form-group">
-                        <input id="form_email" type="email" name="user_email" placeholder="Email" required="required" />
-                      </div>
-                    </div>
-                    <div className="col-lg-4">
-                      <div className="form-group">
-                        <input id="form_object" type="text" name="user_object" placeholder="Object" required="required" />
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <div className="form-group">
-                        <textarea id="form_message" name="message" placeholder="Message" rows="4" required="required"></textarea>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <div className="text-center">
-                        <button className="butn bord curve mt-30" type="submit">
-                          <span>Send Message</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
+            <div className="contact-options">
+              <a className="contact-card contact-card-primary" href={mailtoHref}>
+                <span className="contact-card-symbol" aria-hidden="true">@</span>
+                <span>
+                  <strong>Direct email</strong>
+                  {contactEmail}
+                </span>
+              </a>
+
+              <a className="contact-card" href="#projects">
+                <span className="contact-card-symbol" aria-hidden="true">01</span>
+                <span>
+                  <strong>Selected work</strong>
+                  Fabric, AI, ML and BI delivery
+                </span>
+              </a>
+
+              <div className="contact-card" aria-label="Location">
+                <span className="contact-card-symbol" aria-hidden="true">FR</span>
+                <span>
+                  <strong>Location</strong>
+                  Paris, France
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
       {
         !noLine &&
-        <div className="line bottom left"></div>
+        <div className="line"></div>
       }
     </section>
   );
